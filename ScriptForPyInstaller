@@ -1,0 +1,11 @@
+
+Pyinstall command:
+
+pyinstaller --onefile --windowed --hidden-import=rumps --hidden-import=view_ipcam --hidden-import=urllib --hidden-import=cv2 --add-data=view_ipcam.py:. mbipc.py
+
+
+There's no need to use pyinstaller really, just alias the python code in ~/.bash_profile using the snippet below, then you can just type 'ipc' in the terminal to run it:
+
+Add this near the bottom of bash profile:
+alias ipc='python ~/code/mbipcam/mbipc.py & disown'
+
